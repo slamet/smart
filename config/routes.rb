@@ -1,4 +1,7 @@
 Smart::Application.routes.draw do
+#the code below is get the API of users
+
+  resources :users
 #  get "pages/home"
 
 # get "pages/contact"
@@ -13,8 +16,9 @@ match '/help', :to => 'pages#help'
 
 root :to => 'pages#home'
 
+match '/signup', :to => 'users#new'
 
-
+get "users/new"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

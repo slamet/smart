@@ -1,6 +1,9 @@
-.container {
+/*.container {
 width: 710px;
-}
+padding: 20px;
+margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
+  
+
 
 body {
 	margin: 0 auto;
@@ -10,7 +13,11 @@ background: #cff;
 
 header {
 padding-top: 20px;
+
 }
+
+
+
 header img {
 padding: 1em;
 background: #fff;
@@ -31,10 +38,11 @@ a {
 color: #09c;
 text-decoration: none;
 }
+/*
 a:hover {
 color: #069;
 text-decoration: underline;
-}
+}*/
 
 /* Navigation */
 nav {
@@ -61,41 +69,84 @@ font-weight: bold;
 nav ul li a:visited {
 color: #09c;
 }
+
 nav ul li a:hover {
 text-decoration: underline;
 }
 
 
 /* Sign up button */
-a.signup_button {
-margin-left: auto;
-margin-right: auto;
-display: block;
-text-align: center;
-width: 190px;
-color: #fff;
-background: #006400;
-font-size: 150%;
-font-weight: bold;
-padding: 20px;
+.signup_button {
+
+	width: 190px;
+	margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+	-moz-box-shadow:inset 0px 1px 0px 0px #f29c93;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #f29c93;
+	box-shadow:inset 0px 1px 0px 0px #f29c93;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fe1a00), color-stop(1, #ce0100) );
+	background:-moz-linear-gradient( center top, #fe1a00 5%, #ce0100 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fe1a00', endColorstr='#ce0100');
+	background-color:#fe1a00;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border:1px solid #d83526;
+	display:block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+}
+.signup_button:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ce0100), color-stop(1, #fe1a00) );
+	background:-moz-linear-gradient( center top, #ce0100 5%, #fe1a00 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ce0100', endColorstr='#fe1a00');
+	background-color:#ce0100;
+}.signup_button:active {
+	position:relative;
+	top:1px;
 }
 
 
 /* Round corners */
+/*
 .round {
 -moz-border-radius: 10px;
 -webkit-border-radius: 10px;
 border-radius: 10px;
-}
+}*/
 
 /* footer */
 footer {
 text-align: center;
 margin-top: 10px;
-width: 710px;
+width: 786px;
 margin-left: auto;
 margin-right: auto;
 }
 footer nav {
 float: none;
 }
+
+
+* {margin:0; padding:0}
+
+p {line-height:1.4; margin-bottom:12px}
+#wrapper {width:673px; margin:50px auto}
+#container {position:relative; background:#fff; padding:32px; height:235px; border-right:1px solid #ccc; border-bottom:1px solid #ccc}
+.sliderbutton {float:left; width:25px; height:235px; cursor:pointer}
+#slideleft {background:url(images/icons.gif) -50px -265px no-repeat}
+#slideleft:hover {background-position:-0 -265px}
+#slideright {background:url(images/icons.gif) 0 90px no-repeat}
+#slideright:hover {background-position:-50px 90px}
+#slider {float:left; position:relative; overflow:auto; width:558px; height:235px}
+#slider ul {position:absolute; list-style:none; top:0; left:0}
+#slider li {float:left; width:558px; height:235px}
+.pagination {position:absolute; top:40px; right:61px; list-style:none; height:25px}
+.pagination li {float:left; cursor:pointer; height:8px; width:8px; background:#ccc; margin:0 4px 0 0; border:1px solid #fff}
+.pagination li:hover, li.current {background:#fff}

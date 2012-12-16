@@ -1,8 +1,44 @@
-<h1>Sample App</h1>
-<p>
-This is the home page for the
-<a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
-sample application.
-</p>
 
-<%= link_to "Sign up now!", '#', :class => "signup_button round" %>
+<h3>Welcome to Masmet</h3>
+<p>
+Find out your friend, happening, connect to people or some the activities, organization and more</p>
+<div id="wrapper">
+	<div id="container">
+		<div class="sliderbutton" id="slideleft" onclick="slideshow.move(-1)"></div>
+		<div id="slider">
+			<ul>
+				<li><%= image_tag("photos/1.jpg", :alt => "Sample App", :class => "round") %></li>
+				<li><%= image_tag("photos/2.jpg", :alt => "Sample App", :class => "round") %></li>
+				<li><%= image_tag("photos/3.jpg", :alt => "Sample App", :class => "round") %></li>
+				<li><%= image_tag("photos/4.jpg", :alt => "Sample App", :class => "round") %></li>
+			</ul>
+		</div>
+		<div class="sliderbutton" id="slideright" onclick="slideshow.move(1)"></div>
+		<ul id="pagination" class="pagination">
+			<li onclick="slideshow.pos(0)"></li>
+			<li onclick="slideshow.pos(1)"></li>
+			<li onclick="slideshow.pos(2)"></li>
+			<li onclick="slideshow.pos(3)"></li>
+		</ul>
+	</div>
+</div>
+<script type="text/javascript">
+var slideshow=new TINY.slider.slide('slideshow',{
+	id:'slider',
+	auto:4,
+	resume:false,
+	vertical:false,
+	navid:'pagination',
+	activeclass:'current',
+	position:0,
+	rewind:false,
+	elastic:true,
+	left:'slideleft',
+	right:'slideright'
+});
+</script>
+
+
+<%= link_to "Sign up now!", 'signup', :class => "signup_button round" %>
+
+</div>
