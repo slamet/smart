@@ -1,13 +1,41 @@
 source 'https://rubygems.org'
 
+# AVATAR IMAGE #
+gem 'gravatar_image_tag', '0.1.0'
+
+gem 'kaminari'
+# cURL #
+gem "curl", "~> 0.0.9"
+
+gem "activeuuid"
+
+gem "heroku"
+
+gem 'jquery-rails', '~> 2.1'
+
 gem 'rails', '3.2.1'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+#gem 'sqlite3'
+
+group :development, :test do
+  gem 'sqlite3'
+end
+group :production do
+  gem 'pg'
+end
+
+group :development do
+	gem 'better_errors'
+	gem "binding_of_caller", "~> 0.6.8"
+	 gem 'meta_request'
+	 
+gem 'faker', '0.3.1'
 
 
+end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -20,7 +48,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

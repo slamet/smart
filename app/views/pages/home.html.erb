@@ -1,8 +1,35 @@
+<% if signed_in? %>
+<table class="profile" summary="For signed-in users">
+<tr>
+<td class="sidebar round">
+<h1 class="micropost">What's up?</h1>
+<%= render 'shared/micropost_form' %>
+<%= render 'shared/feed' %>
+</td>
+<td class="main">
+<%= render 'shared/user_info' %>
+</td>
+</tr>
+</table>
+<% else %>
+
+<h3>Sign in</h3>
+<%= form_for(:session, :url => sessions_path) do |f| %>
+<%= f.text_field :email, :placeholder=> "Your email" %>
+<%= f.password_field :password, :placeholder=> "Your password" %>
+<%= f.submit "Log in" %>
+<% end %>
+</h1>
+</td>
+</tr>
+</table>
 
 <h3>Welcome to Masmet</h3>
 <p>
 Find out your friend, happening, connect to people or some the activities, organization and more</p>
+
 <div id="wrapper">
+
 	<div id="container">
 		<div class="sliderbutton" id="slideleft" onclick="slideshow.move(-1)"></div>
 		<div id="slider">
@@ -42,3 +69,7 @@ var slideshow=new TINY.slider.slide('slideshow',{
 <%= link_to "Sign up now!", 'signup', :class => "signup_button round" %>
 
 </div>
+<% end %>
+
+
+
