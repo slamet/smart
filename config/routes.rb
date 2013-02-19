@@ -1,7 +1,21 @@
 Smart::Application.routes.draw do
+
+  resources :users do
+  member do
+    get :following, :followers
+  end
+end
+  get "password_resets/new"
+
+  get "sessions/new"
+
 #the code below is get the API of users
 
   resources :users
+  resources :sessions, :only => [:new, :create, :destroy]
+   resources :password_resets
+   resources :microposts, :only => [:create, :destroy]
+   resources :relationships, :only => [:create, :destroy]
 #  get "pages/home"
 
 # get "pages/contact"
@@ -17,8 +31,14 @@ match '/help', :to => 'pages#help'
 root :to => 'pages#home'
 
 match '/signup', :to => 'users#new'
+match '/signin', :to => 'sessions#new'
+match '/signout', :to => 'sessions#destroy'
 
-get "users/new"
+
+
+
+
+#get "users/new"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,1 +1,35 @@
-tes
+
+<h1>Sign up</h1>
+<%= form_for(@user) do |f| %>
+
+<%= render 'shared/error_messages' %>
+
+
+
+<div class="field">
+<%= f.label :name %><br />
+<%= f.text_field :name, :placeholder=> "Your username"%>
+</div>
+
+<div class="field">
+<%= f.label :email %><br />
+<%= f.text_field :email, :placeholder=> "Your email"%>
+</div>
+<div class="field">
+<%= f.label :password %><br />
+<%= f.password_field :password, :placeholder=> "Your password" %>
+</div>
+<div class="field">
+<%= f.label :password_confirmation, "Re-password" %><br />
+<%= f.password_field :password_confirmation, :placeholder=> "Your password confirmation" %>
+</div>
+<div class="actions"></br>
+<%= f.submit "Sign up" %><br />
+
+</div>
+ 	&nbsp;
+ 	 	&nbsp;
+ 	 	  &nbsp;
+
+<% end %>
+
