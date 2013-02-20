@@ -44,7 +44,7 @@ section {
 margin-top: 1em;
 font-size: 120%;
 padding: 20px;
-background: #fff;
+
 background-color:#f4f4f4;
 
 
@@ -461,7 +461,7 @@ ul ul {
 
 .menu2 > li > a:before {
     content: '';
-    background-image: url(/images/rails.png);
+    
     background-repeat: no-repeat;
     font-size: 36px;
     height: 1em;
