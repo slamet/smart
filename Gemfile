@@ -17,6 +17,8 @@ group :development, :test do
     gem 'better_errors'
 	gem "binding_of_caller", "~> 0.6.8"
 	 gem 'meta_request'
+
+	 #gem 'therubyracer'
 end
 group :production do
   gem 'pg'
