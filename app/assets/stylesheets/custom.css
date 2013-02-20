@@ -738,7 +738,7 @@ margin-bottom: 0;
     background: -moz-linear-gradient(center top , #333333, #111111) repeat scroll 0 0 transparent;
 }
 #logo a {
-    
+    background: no-repeat scroll 20px 9px transparent;
     color: #FFFFFF;
     display: block;
     height: 40px;

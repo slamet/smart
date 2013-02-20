@@ -7,8 +7,16 @@ gem 'rails', '3.2.1'
 
 #gem 'sqlite3'
 
+gem 'gravatar_image_tag', '0.1.0'
+
+gem 'kaminari'
+
 group :development, :test do
   gem 'sqlite3'
+
+    gem 'better_errors'
+	gem "binding_of_caller", "~> 0.6.8"
+	 gem 'meta_request'
 end
 group :production do
   gem 'pg'
