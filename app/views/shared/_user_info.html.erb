@@ -12,7 +12,7 @@
 	<ul>			
 			</ul>
  </li>
- <li class="item2"><a href="#">micropost<span></span></a>
+ <li class="item2"><a href="#">micropost<span><%= pluralize(current_user.microposts.count, "") %></span></a>
 			
  </li>
   <li class="item2"><a href="<%= following_user_path (@user) %> ">following<span><%= @user.following.count %></span></a>
