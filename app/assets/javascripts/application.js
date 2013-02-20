@@ -13,3 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+//= slider
+
+//=jquery-1.7.1.min
+//=modern
+//=jquery-1.8.2
+//=rails
