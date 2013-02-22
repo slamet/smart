@@ -32,7 +32,7 @@ class User < ActiveRecord::Base
                           :length   => {:within => 6..40} 
 
      before_save :encrypt_password
-     before_create { generate_token(:auth_token) }
+    # before_create { generate_token(:auth_token) }
 
 def send_password_reset
       generate_token(:password_reset_token)
@@ -41,22 +41,16 @@ def send_password_reset
       UserMailer.password_reset(self).deliver 
     end
 
- def generate_token(column)
-    begin
-      self[column] = SecureRandom.urlsafe_base64
-    end while User.exists?(column => self[column])
-  end
+ #def generate_token(column)
+ #   begin
+  #    self[column] = SecureRandom.urlsafe_base64
+  #  end while User.exists?(column => self[column])
+ # end
 
      def has_password?(submitted_password)
           encrypted_password == encrypt(submitted_password)
      end 
 
-     def self_authenticate(email, submitted_password)
-       user = find_by_email(email)
-     # user && user.has_password?(submitted_password) ? user : nil
-       return nil if user.nil?
-        return user if user.has_password?(submitted_password)
-     end
 
      def User.authenticate(email, submitted_password)
       user = find_by_email(email)

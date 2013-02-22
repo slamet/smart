@@ -54,9 +54,11 @@ class UsersController < ApplicationController
     def create
       @user = User.new(params[:user])
       if @user.save
-        UserMailer.registration_confirmation(@user).deliver
         sign_in @user
-        flash[:success] = "Welcome to the Masmet App!"
+        UserMailer.registration_confirmation(@user).deliver
+        
+        flash[:success] = "Sign up is Success!"
+        
         redirect_back_or @user
 
       else
@@ -65,7 +67,7 @@ class UsersController < ApplicationController
       end
     end
 
-    def edit
+  def edit
     @user = User.find(params[:id])
     @title = "Edit user"
   end
