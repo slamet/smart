@@ -19,3 +19,6 @@
 //=modern
 //=jquery-1.8.2
 //=rails
+//=bootstrap
+//=bootstrap.min
+//=bootstrap.js.coffee
