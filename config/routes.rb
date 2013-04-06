@@ -27,6 +27,7 @@ end
 match '/contact', :to => 'pages#contact'
 match '/about', :to => 'pages#about'
 match '/help', :to => 'pages#help'
+match '/front', :to => 'pages#front'
 
 root :to => 'pages#home'
 

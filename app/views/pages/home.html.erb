@@ -1,18 +1,4 @@
-<% if signed_in? %>
-<table class="profile" summary="For signed-in users">
-<tr>
-<td class="sidebar round">
-<h1 class="micropost">What's up?</h1>
-<%= render 'shared/micropost_form' %>
-<%= render 'shared/feed' %>
-</td>
-<td class="main">
-<%= render 'shared/user_info' %>
-</td>
-</tr>
-</table>
 
-<% else %>
 
 
 
@@ -62,7 +48,7 @@ var slideshow=new TINY.slider.slide('slideshow',{
 <%= link_to "Sign up now!", 'signup', :class => "signup_button round" %>
 
 </div>
-<% end %>
+
 
 
 
